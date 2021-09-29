@@ -19,7 +19,7 @@ nav {
 }
 
 .logo {
-  width: 16.25rem;
+  width: 6.25rem;
 }
 
 /*----- MENU LINKS --------*/
@@ -43,7 +43,7 @@ nav ul li {
 .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
-  height: 6rem !important;
+  height: 5rem !important;
 }
 
 @media (max-width: 768px) {
