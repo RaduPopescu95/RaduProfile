@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Roboto Condesed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif !important;
 }
 
 /************************ NAVBAR *********************************/
@@ -19,7 +19,7 @@ nav {
 }
 
 .logo {
-  width: 6.25rem;
+  width: 16.25rem;
 }
 
 /*----- MENU LINKS --------*/
@@ -43,7 +43,7 @@ nav ul li {
 .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
-  height: 5rem !important;
+  height: 6rem !important;
 }
 
 @media (max-width: 768px) {
@@ -65,7 +65,7 @@ nav ul li {
 
 .header-wraper {
   position: relative;
-  background: url(wall-and-laptop-background.jpg) no-repeat;
+  background: url(hotel.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -82,11 +82,15 @@ nav ul li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "Roboto Condesed", sans-serif;
   z-index: 1;
 }
 
 .main-info h1 {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+.main-info h2 {
   color: var(--primary-orange);
   text-transform: uppercase;
 }
@@ -134,5 +138,30 @@ nav ul li {
 @media (max-width: 768px) {
   .particles-canvas {
     display: none;
+  }
+}
+
+/************************ ABOUT ME *********************************/
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 26rem;
+  border-radius: 5%;
+  padding: 0.8rem;
+  border: 1px solid var(--primary-orange);
+}
+
+.about-heading {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media (max-width: 468px) {
+  .profile-img {
+    width: 10rem;
   }
 }

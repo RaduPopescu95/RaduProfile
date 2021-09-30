@@ -7,15 +7,16 @@ const Header = () => {
     <div className="header-wraper">
       <div className="main-info">
         <canvas></canvas>
-        <h1>web development and websites promotions</h1>
+        <h1>Lemigo Hotel</h1>
+        <h2>Everything right where you need it</h2>
         <Typed
           className="typed-text"
-          strings={["Web Design", "Web Development", "Facebook Ads SMM", "Google Ads"]}
+          strings={["Cazare", "Fitness", "Spa", "Tratamente balneare"]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
-        <a href="#" className="btn-main-offer">contact me</a>
+        <a href="#" className="btn-main-offer">contactează-ne</a>
       </div>
     </div>
   )
