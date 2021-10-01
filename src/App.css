@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
 :root {
-  --primary-white: #fff;
+  --primary-white: #ffffff;
+  --primary-light-grey: #f4f4f4;
   --primary-orange: #f9ab00;
-  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-dark: #2e2e2e;
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
 }
@@ -16,6 +17,7 @@ body {
 
 nav {
   z-index: 2;
+  background-color: var(--primary-dark);
 }
 
 .logo {
@@ -43,7 +45,7 @@ nav ul li {
 .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
-  height: 6rem !important;
+  height: 7rem !important;
 }
 
 @media (max-width: 768px) {
@@ -65,7 +67,7 @@ nav ul li {
 
 .header-wraper {
   position: relative;
-  background: url(hotel.jpg) no-repeat;
+  background: url(wall-and-laptop-background.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -86,11 +88,6 @@ nav ul li {
 }
 
 .main-info h1 {
-  color: var(--primary-orange);
-  text-transform: uppercase;
-}
-
-.main-info h2 {
   color: var(--primary-orange);
   text-transform: uppercase;
 }
@@ -149,9 +146,9 @@ nav ul li {
 }
 
 .profile-img {
-  width: 26rem;
-  border-radius: 5%;
-  padding: 0.8rem;
+  width: 16rem;
+  border-radius: 50%;
+  padding: 0.3rem;
   border: 1px solid var(--primary-orange);
 }
 
