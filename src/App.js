@@ -1,11 +1,13 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Particles from "react-particles-js";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import AboutMe from './components/AboutMe';
+import Navbar from "./components/navbar/Navbar";
+import Header from "./components/header/Header";
+import AboutMe from './components/aboutMe/AboutMe';
 import Services from './components/services/Services';
 import Experience from './components/experience/Experience';
+import Portofolio from './components/portofolio/Portofolio';
+import Testimonials from './components/testimonials/Testimonials';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
       <AboutMe/>
       <Services/>
       <Experience/>
+      <Portofolio/>
+      <Testimonials/>
     </>
   );
 }
