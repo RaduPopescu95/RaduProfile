@@ -23,8 +23,21 @@ nav {
   background-color: var(--primary-dark);
 }
 
-.logo {
-  width: 16.25rem;
+/* .logo {
+  width: 11.85rem;
+} */
+
+nav h1 {
+  max-width: 15.25rem;
+  width: 14rem;
+  padding: 0.2rem !important;
+  height: 2rem !important;
+  color: var(--primary-orange) !important;
+  text-transform: uppercase;
+  line-height: 2.2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
 }
 
 /*----- MENU LINKS --------*/
@@ -32,6 +45,10 @@ nav a.nav-link {
   font-size: 0.8rem;
   letter-spacing: 0.0375rem;
   cursor: pointer;
+}
+
+nav ul {
+  margin-left: 23.2rem;
 }
 
 nav ul li {
@@ -45,15 +62,25 @@ nav ul li {
   border-top: 0.1875rem solid var(--primary-dark);
 }
 
-.navbar-brand {
+/* .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
-  height: 7rem !important;
-}
+  height: 5rem !important;
+} */
 
 @media (max-width: 768px) {
   .navbar-brand {
     width: 7rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  nav ul {
+    margin-left: 0rem;
+  }
+
+  nav h1 {
+    font-size: medium;
   }
 }
 

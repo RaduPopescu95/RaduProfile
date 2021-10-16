@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Services = () => {
   return (
-    <div className="services">
+    <div id="services" className="services">
       <h1 className="py-5">Serviciile noastre</h1>
       <div className="container">
         <div className="row">

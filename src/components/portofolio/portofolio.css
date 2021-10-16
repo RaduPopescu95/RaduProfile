@@ -70,6 +70,10 @@ body {
   cursor: pointer;
 }
 
+.popupbox-wrapper {
+  margin-top: 5rem;
+}
+
 /*------------ OVERFLOW BOX ------------------*/
 .portfolio-image-popupbox {
   width: 45rem;
