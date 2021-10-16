@@ -4,21 +4,30 @@ import './header.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
+
 const Header = () => {
   return (
     <div id="home" className="header-wraper">
       <div className="main-info">
         <canvas></canvas>
-        <h1>Web development and websites promotions</h1>
-        
+      <div class="hero-content">
+        <div class="hero-text">
+        <p>I'm</p>
+        <h1>Radu</h1>
+        <h2></h2>
         <Typed
           className="typed-text"
-          strings={["Web Design", "Web Development", "Facebook Ads SMM", "Google Ads"]}
+          strings={["Web Designer", "Web Developer", "Facebook Ads SMM", "Google Ads"]}
           typeSpeed={40}
           backSpeed={60}
           loop
         />
-        <a href="#" className="btn-main-offer">Contact</a>
+        </div>
+        <div class="hero-btn">
+            <a class="btn" href="">Hire Me</a>
+            <a class="btn" href="">Contact Me</a>
+        </div>
+        </div>
       </div>
     </div>
   )
