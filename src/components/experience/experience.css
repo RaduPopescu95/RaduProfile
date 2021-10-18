@@ -63,34 +63,100 @@ body {
 .marker {
   width: 1rem;
   height: 1rem;
-  border-radius: 50%;
-  border: 0.3125rem solid var(--primary-dark);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in 0.1s;
+  transition-delay: 0.1s;
   background: var(--primary-orange);
   margin-top: 0.625rem;
+  outline: 5px solid var(--primary-grey);
   z-index: 3;
+}
+
+.timeline-block-left:hover .marker {
+  transform: rotate(-45deg);
+  outline: 5px solid var(--primary-orange);
+}
+
+.timeline-block-right:hover .marker {
+  transform: rotate(135deg);
+  outline: 5px solid var(--primary-orange);
+}
+
+.timeline-event-thumbnail {
+  transition: box-shadow 0.5s ease-in 0.1s;
+  transition-delay: 0.1s;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--primary-grey);
+  box-shadow: inset 0 0 0 0em #425bb5;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+.timeline-block-left:hover .timeline-event-thumbnail {
+  box-shadow: inset 0 0 40em var(--primary-orange);
+}
+
+.timeline-block-right:hover .timeline-event-thumbnail {
+  box-shadow: inset 0 0 40em var(--primary-orange);
 }
 
 .timeline-content {
   width: 95%;
   padding: 0 0.9375rem;
   color: var(--primary-dark-grey);
+}
+
+.timeline-block-left p {
+  direction: ltr;
+}
+
+.timeline-block-left h3,
+h4 {
   direction: ltr;
 }
 
 .timeline-content h3 {
-  margin-top: 0.3125rem;
+  margin-top: 0;
   color: var(--primary-red);
   font-weight: 900;
 }
 
+.timeline-content h4 {
+  margin-top: 0;
+  color: var(--primary-red);
+  font-weight: 900;
+}
+
+.timeline-content p {
+  margin-top: 0.3125rem;
+}
+
 /*------------ MEDIA ------------------*/
 @media (max-width: 768px) {
+  .marker {
+    width: 0.8rem;
+    height: 0.8rem;
+    outline: 3.5px solid var(--primary-grey);
+    margin-left: 0.4rem;
+  }
+
+  .timeline-block-left:hover .marker {
+    transform: rotate(135deg);
+  }
+
+  .timeline-block-left:hover .timeline-event-thumbnail {
+    box-shadow: inset 0 0 40em var(--primary-orange);
+  }
+
   .experience .container {
     padding-left: 0;
   }
 
   .experience-wrapper::before {
-    left: 0.5rem;
+    left: 0.8rem;
     margin-bottom: 1.875rem;
   }
   .timeline-block-right {
