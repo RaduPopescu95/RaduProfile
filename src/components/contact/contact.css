@@ -35,77 +35,201 @@ body {
   font-size: 1.2rem;
 }
 
-/*------------------ INPUTS -------------------------------*/
-.contacts input,
-.contacts textarea {
+/* ------------------- FORMULAR ------------------------- */
+
+.formular {
   width: 100%;
-  box-sizing: border-box;
-  background: none;
+}
+
+/*------------------ INPUTS -------------------------------*/
+
+.contacts {
+  width: 100%;
+  min-height: 50vh;
+  display: grid;
+  grid-template: 150px auto / repeat(1, 100%);
+  row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  grid: 1;
+}
+
+.inputul {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-size: 16px;
+  color: #4b2354;
+  line-height: 1.2;
+  height: 62px;
+  padding: 0 20px 0 23px;
+  border: none;
+  text-align: left;
+}
+
+.descriptor {
+  height: 18.2rem !important;
+  padding: 19px 20px 0 23px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  text-align: start;
+  font-size: 20px;
+  color: #4b2354;
+  line-height: 1.2;
+  height: 62px;
+  padding: 0 20px 0 23px;
+  border: none;
   resize: none;
-  border: 0;
-  border-bottom: 0.125rem solid var(--primary-dark-grey);
-  border-radius: 0;
-  color: var(--primary-orange);
-  outline: 0 !important;
-  box-shadow: none !important;
-  margin-bottom: 1rem;
-  padding-left: 0 !important;
+}
+
+.inputs-div {
+  width: 100%;
+  position: relative;
+  background-color: var(--primary-white);
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .contacts .container {
   padding: 4rem 0;
+  width: 1100px;
+  background: url(contacts2.svg) no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 62px;
+  box-shadow: 6px 6px 12px #f4a800, -6px -6px 12px #feae00;
+
+  background-size: cover;
 }
 
-.contacts input:focus,
-.contacts textarea:focus {
-  background: transparent;
-  color: var(--primary-orange);
-  border-bottom: 0.125rem solid var(--primary-dark-grey);
+@media (max-width: 1170px) {
+  .contacts .container {
+    width: 900px;
+  }
 }
 
-.contacts textarea {
+@media (max-width: 942px) {
+  .contacts .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts .container {
+    padding: 62px;
+    width: 600px;
+  }
+
+  .formular {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 647px) {
+  .contacts .container {
+    padding: 62px;
+    width: 500px;
+  }
+
+  .formular {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 551px) {
+  .contacts .container {
+    width: 370px;
+  }
+}
+
+.inputul:focus,
+.descriptor:focus {
+  border-color: transparent !important;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* .contacts textarea {
   height: 12.2rem !important;
-}
+} */
 
 .contact-btn {
-  margin: 1rem 0 0 0;
-  width: 100%;
-  background: none;
-  color: var(--primary-orange);
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--primary-dark-grey);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 }
 
-.line {
+.contact-btn:hover {
+  background-color: var(--primary-orange);
+  box-shadow: 0px 15px 20px var(--primary-orange);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.contact-btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+/* .line {
   position: relative;
   top: -0.8rem;
   width: 0;
   height: 0.125rem;
   background: var(--primary-orange);
   display: inline-block;
-}
+} */
 
-input:focus + .line,
+/* input:focus + .line,
 textarea:focus + .line {
   width: 100%;
   transition: width 0.5s ease-in-out;
-}
+} */
 
-input.form-control {
+/* input.form-control {
   margin: -0.3rem 0;
 }
 
 textarea.form-control {
   margin: -0.3rem 0;
-}
+} */
 
 .error-message {
-  color: var(--primary-white);
-  background: var(--primary-hover-red);
-  text-align: left;
+  color: var(--primary-light-grey);
+  background: var(--primary-red);
+  text-align: center;
+  margin-bottom: 0.6rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.05);
+  font-weight: 100;
+  transition: all 0.4s;
+  display: inline-block;
 }
 
 .success-message {
   font-weight: 900;
   color: var(--primary-green);
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 /*---------------- MEDIA -----------------------*/

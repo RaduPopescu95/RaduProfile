@@ -36,20 +36,25 @@ const Contacts = () => {
 
   return (
     <div id="contactu" className="contacts">
-      <div className="text-center">
+      <div className="text-center
+      ">
         <h1>contact me</h1>
         <p>Please fill out the form and describe you project needs and I'll contact you as soon as possible.</p>
         <span className="success-message">{successMessage}</span>
       </div>
       <div className="container">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="formular" onSubmit={handleSubmit(onSubmit)}>
           <div className="row">
             <div className="col-md-6 col-xs-12">
               {/* NAME INPUT */}
-              <div className="text-center">
+               <span className="error-message">
+                {errors.name && errors.name.message}
+              </span>
+              <div className="inputs-div text-center
+              ">
                 <input
                   type="text"
-                  className="form-control"
+                  className="inputul form-control"
                   placeholder="Name"
                   name="name"
                   {...register("name",{
@@ -61,16 +66,18 @@ const Contacts = () => {
                     })
                   }
                 />
-                <div className="line"></div>
+                {/* <div className="line"></div> */}
               </div>
-              <span className="error-message">
-                {errors.name && errors.name.message}
-              </span>
+             
               {/* PHONE INPUT */}
-              <div className="text-center">
+              <span className="error-message">
+                {errors.phone && errors.phone.message}
+              </span>
+              <div className="inputs-div text-center
+              ">
                 <input
                   type="text"
-                  className="form-control"
+                  className="inputul form-control"
                   placeholder="Phone Number"
                   name="phone"
                   {...register("phone",{
@@ -78,16 +85,18 @@ const Contacts = () => {
                     })
                   }
                 />
-                <div className="line"></div>
+                {/* <div className="line"></div> */}
               </div>
-              <span className="error-message">
-                {errors.phone && errors.phone.message}
-              </span>
+              
               {/* EMAIL INPUT */}
-              <div className="text-center">
+               <span className="error-message">
+                {errors.email && errors.email.message}
+              </span>
+              <div className="inputs-div text-center
+              ">
                 <input
                   type="email"
-                  className="form-control"
+                  className="inputul form-control"
                   placeholder="Email"
                   name="email"
                   {...register("email",{
@@ -99,16 +108,18 @@ const Contacts = () => {
                     })
                   }
                 />
-                <div className="line"></div>
+                {/* <div className="line"></div> */}
               </div>
-              <span className="error-message">
-                {errors.email && errors.email.message}
-              </span>
+             
               {/* SUBJECT INPUT */}
-              <div className="text-center">
+               <span className="error-message">
+                {errors.subject && errors.subject.message}
+              </span>
+              <div className="inputs-div text-center
+              ">
                 <input
                   type="text"
-                  className="form-control"
+                  className="inputul form-control"
                   placeholder="Subject"
                   name="subject"
                   {...register("subject",{
@@ -116,18 +127,20 @@ const Contacts = () => {
                     })
                   }
                 />
-                <div className="line"></div>
+                {/* <div className="line"></div> */}
               </div>
-              <span className="error-message">
-                {errors.subject && errors.subject.message}
-              </span>
+             
             </div>
             <div className="col-md-6 col-xs-12">
               {/* DESCRIPTION */}
-              <div className="text-center">
+              <span className="error-message">
+                {errors.description && errors.description.message}
+              </span>
+              <div className="inputs-div text-center
+              ">
                 <textarea
                   type="text"
-                  className="form-control"
+                  className="descriptor form-control"
                   placeholder="Please describe shortly you project..."
                   name="description"
                   {...register("description",{
@@ -135,12 +148,11 @@ const Contacts = () => {
                     })
                   }
                 ></textarea>
-                <div className="line"></div>
+                {/* <div className="line"></div> */}
               </div>
-              <span className="error-message">
-                {errors.description && errors.description.message}
-              </span>
+              <div className="btn-div">
               <button className="btn-main-offer contact-btn" type="submit">contact me</button>
+              </div>
             </div>
           </div>
         </form>
