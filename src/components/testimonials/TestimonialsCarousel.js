@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './testimonials.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 // AVATARS IMPORTS
 import avatar1 from "./avatars/avatar-1.png";
 import avatar2 from "./avatars/avatar-2.png";
@@ -20,11 +22,13 @@ const TestimonialsCarousel = () => {
       interval={3000}
     >
       <>
+      
         <img src={avatar1} alt="John Doe 1" />
         <div className="myCarousel">
           <h3>John Doe 1</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ratione sequi saepe dicta blanditiis, molestias eum excepturi quod fugiat veniam!</p>
         </div>
+        
       </>
       <>
         <img src={avatar2} alt="Jane Doe 2" />

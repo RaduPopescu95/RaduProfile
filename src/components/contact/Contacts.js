@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import "./contact.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Contacts = () => {
+
+useEffect(() => {
+    Aos.init();
+    
+  }, [])
+
+
   const [successMessage, setSuccessMessage] = useState("");
   const { register, handleSubmit, formState: { errors }} = useForm();
 
@@ -50,7 +58,7 @@ const Contacts = () => {
                <span className="error-message">
                 {errors.name && errors.name.message}
               </span>
-              <div className="inputs-div text-center
+              <div  className="inputs-div text-center
               ">
                 <input
                   type="text"
@@ -73,7 +81,7 @@ const Contacts = () => {
               <span className="error-message">
                 {errors.phone && errors.phone.message}
               </span>
-              <div className="inputs-div text-center
+              <div  className="inputs-div text-center
               ">
                 <input
                   type="text"
@@ -92,7 +100,7 @@ const Contacts = () => {
                <span className="error-message">
                 {errors.email && errors.email.message}
               </span>
-              <div className="inputs-div text-center
+              <div  className="inputs-div text-center
               ">
                 <input
                   type="email"
@@ -115,7 +123,7 @@ const Contacts = () => {
                <span className="error-message">
                 {errors.subject && errors.subject.message}
               </span>
-              <div className="inputs-div text-center
+              <div  className="inputs-div text-center
               ">
                 <input
                   type="text"
@@ -136,7 +144,7 @@ const Contacts = () => {
               <span className="error-message">
                 {errors.description && errors.description.message}
               </span>
-              <div className="inputs-div text-center
+              <div  className="inputs-div text-center
               ">
                 <textarea
                   type="text"
@@ -150,7 +158,7 @@ const Contacts = () => {
                 ></textarea>
                 {/* <div className="line"></div> */}
               </div>
-              <div className="btn-div">
+              <div  className="btn-div">
               <button className="btn-main-offer contact-btn" type="submit">contact me</button>
               </div>
             </div>

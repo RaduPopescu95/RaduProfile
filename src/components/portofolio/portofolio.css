@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
+body {
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
 :root {
   --primary-white: #ffffff;
   --primary-light-grey: #f4f4f4;
@@ -10,10 +14,6 @@
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
   --primary-black: #000000;
-}
-
-body {
-  font-family: "Roboto Condensed", sans-serif !important;
 }
 
 /************************ PORTFOLIO *********************************/
@@ -41,7 +41,7 @@ body {
 /*------------ OVERFLOW BOX ------------------*/
 .overflow {
   position: absolute;
-  opacity: 0;
+  opacity: 0%;
   background: var(--primary-black);
   width: 15rem;
   height: 8rem;
@@ -50,7 +50,23 @@ body {
   cursor: pointer;
 }
 
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+  0% {
+    transform: scale(0);
+  }
+}
+
 .portfolio-image-box:hover .overflow {
+  animation-name: pop;
+  animation-duration: 0.5s;
   opacity: 60%;
   transition: 0.3s ease-in-out;
 }

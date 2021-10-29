@@ -71,6 +71,21 @@ body {
   border-radius: 50%;
 }
 
+/* .testimonials-content {
+  animation-name: pop;
+  animation-duration: 1s;
+} */
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .carousel .slide {
   background: transparent !important;
   height: 100% !important;

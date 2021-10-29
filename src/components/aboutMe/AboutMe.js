@@ -1,14 +1,21 @@
-import React from "react";
+import React,{useEffect} from "react";
 import './aboutme.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const AboutMe = () => {
+
+   useEffect(() => {
+    Aos.init();
+    
+  }, [])
+
   return (
     <div id="about" className="container py-5">
       <div className="row">
         <div className="col-lg-6 col-xm-12">
-          <div className="photo-wrap mb-5">
+          <div data-aos="zoom-out-up" data-aos-duration="1000" className="photo-wrap mb-5">
             <img className="profile-img" src="assets/me.jpg" alt="author..." />
           </div>
         </div>

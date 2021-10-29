@@ -1,12 +1,20 @@
-import React from "react";
+import React,{useEffect} from "react";
 import './experience.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Experience = () => {
+
+   useEffect(() => {
+    Aos.init();
+    
+  }, [])
+  
   return (
     <div id="experience" className="experience">
       <div className="d-flex justify-content-center my-5">
-        <h1>experience</h1>
+        <h1  >experience</h1>
       </div>
       <div className="container experience-wrapper">
         <div className="timeline-block timeline-block-right">
